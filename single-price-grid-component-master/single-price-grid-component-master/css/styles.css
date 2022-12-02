@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    top: 0;
+    left: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+.container {
+    transform: translate(25%, 10%);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    color: black;
+    width: 50%;
+    box-shadow: 0px 0px 5px 0px grey;
+}
+
+.grid-container .textbox {
+    padding: 10%;
+    background: white;
+}
+
+.grid-container .textbox h3 {
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+.grid-container .textbox h5 {
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.grid-container .textbox p {
+    color: hsl(204, 43%, 80%);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: hsl(204, 43%, 93%);
+/*    text-align: center;*/
+    width: 50%;
+}
+
+.grid-container2 .pricebox h4 {
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+.grid-container2 .pricebox {
+    padding: 10%;
+    background: hsl(179, 62%, 43%);
+}
+
+.grid-container2 .pricebox p {
+    font-size: 16px;
+    padding-bottom: 25px;
+    line-height: 30px;
+}
+
+.grid-container2 .pricebox .btn {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    display: block;
+    background: hsl(71, 73%, 54%);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 3px 3px 0px grey;
+}
+
+.grid-container2 .pricebox .price {
+    display: flex;
+}
+
+.grid-container2 .pricebox .price h2 {
+    padding-bottom: 10px;
+}
+
+.grid-container2 .pricebox .price p {
+    padding-left: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    opacity: 0.5px;
+}
+
+.grid-container2 .detailbox {
+    padding: 10%;
+    background: hsl(218, 22%, 67%);
+}
+
+.grid-container2 .detailbox p {
+    padding-top: 25px;
+    line-height: 30px;
+}
