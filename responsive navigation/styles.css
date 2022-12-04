@@ -132,3 +132,10 @@ input[type=checkbox] {
         display: block;
     }
 }
+
+@media (max-width: 780px) {
+    .main-menu {
+        width: 100%;
+        left: 100px;
+    }
+}
