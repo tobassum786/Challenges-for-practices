@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: 'outfit', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    line-height: 1.6;
+    background: black;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-menu .nav-item {
+    display: flex;
+}
+
+.main-menu .nav-item li {
+     margin-right: 40px;
+}
+
+.main-menu .nav-item input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.main-menu .nav-item .btn {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: white;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 32px;
+    user-select: none;
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .main-menu {
+        position: fixed;
+        display: none;
+        height: auto;
+        width: 40%;
+        left: 594.6px;
+        top: 70px;
+        background: black;
+        z-index: 999;
+    }
+    
+    .main-menu .menu {
+        clear: both;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    
+    .main-menu .nav-item {
+        flex-flow: wrap column;
+        padding: 20px 30px;
+    }
+    
+    .main-menu .search-bar {
+        display: none;
+    }
+    
+    
+    .main-menu .nav-item li {
+        padding-bottom: 16px;
+    }
+    
+    input[type=checkbox]:checked ~ .main-menu {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}
