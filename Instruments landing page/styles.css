@@ -18,6 +18,7 @@
     font-family: 'Overpass', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    clear: both;
 }
 
 body {
@@ -75,6 +76,7 @@ a:hover::after {
     font-size: 14px;
     border-radius: 50px;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -89,6 +91,25 @@ i {
 
 section {
     padding: 100px;
+}
+
+/*grid-margins and paddings*/
+
+.grid-start-3 {
+    grid-column-start: 3;
+}
+
+.grid-start-11 {
+    grid-column-start: 11;
+}
+
+.grid-start-19 {
+    grid-column-start: 19;
+}
+
+
+.grid-span-5 {
+    grid-column-end: span 5;
 }
 
 .nav-bar {
@@ -218,7 +239,95 @@ section {
     font-weight: 300;
     line-height: 1.6;
 }
+.parent-grid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(25, 1fr);
+    width: 100%;
+}
 
-.grid-data {
+.client-show {
+    position: relative;
+}
+
+.client-show .grid-logo {
+    height: auto;
+    width: 100%;
+}
+
+.client-show .transition {
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all .3s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+}
+
+.client-show .transition.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.client-show .grid-logo img {
+    width: 100%;
+}
+
+.image {
+    transition: opacity .4s ease-out;
     display: block;
+    width: 100%;
+}
+
+.image.is-loaded {
+    opacity: 1;
+}
+
+/*------------------footer----------------*/
+
+
+
+footer {
+    padding: 150px 20px 0;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+}
+
+.main-ft {
+    display: flex;
+    align-items: center;
+    line-height: 1.6;
+}
+
+.main-ft .main-ft-items {
+    padding-bottom: 10px;
+}
+
+.main-ft .main-ft-items a {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.ft-cta {
+    display: flex;
+    align-items: baseline;
+}
+
+.ft-cta li {
+    list-style: none;
+}
+
+.ft-cta li .btn-ft {
+    filter: invert(1);
+    opacity: .6;
+}
+
+.ft-cta .social-ico {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 20px;
 }
