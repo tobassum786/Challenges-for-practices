@@ -1,5 +1,3 @@
-
-
 /* Find all slideshow containers */
 var slideshowContainers = document.getElementsByClassName("client-show");
 /* For each container get starting variables */

@@ -36,25 +36,28 @@ ul {
 a {
     text-decoration: none;
     color: var(--primary-color);
-    transition: 5s;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 400;
-    word-spacing: 5px;
+    word-spacing: 2.3px;
     cursor: pointer;
+    transition: .5s;
+    padding: 10px;
 }
 
 a:hover::before {
     content: '[';
     opacity: .6;
-    transition: 5s;
+    font-size: 12px;
+    font-weight: 400;
     padding: 10px;
 }
 
 a:hover::after {
     content: ']';
     opacity: .6;
-    transition: 5s;
+    font-size: 12px;
+    font-weight: 400;
     padding: 10px;
 }
 
@@ -126,7 +129,7 @@ section {
 .nav-bar label {
     text-transform: uppercase;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .nav-bar .nav-items {
@@ -134,11 +137,7 @@ section {
     position: relative;
     justify-content: center;
     text-align: center;
-}
-
-.nav-bar .nav-items li {
-    padding: 0 20px;
-    margin: 0 20px;
+    gap: 20px;
 }
 
 .video-layout {
@@ -181,7 +180,7 @@ video {
 .what-we-do .img-box,
 .work-place .img-box,
 .about-us .img-box {
-    max-width: 70%;
+    max-width: 100%;
 }
 
 .what-we-do .img-box img,
