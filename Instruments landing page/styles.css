@@ -255,35 +255,39 @@ section {
     width: 100%;
 }
 
-.client-show .transition {
+.transition {
     left: 0;
     top: 0;
     opacity: 0;
-    transform: translateY(-20px);
-    transition: all .3s ease-in-out;
-    visibility: hidden;
+    transition: .10s;
+    animation: imgout 10s ease-in-out infinite;
     width: 100%;
 }
 
-.client-show .transition.active {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
+@keyframes imgout {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+        transition: .10s;
+    }
+    
+    50% {
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .10s;
+    }
+    
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: .10s;
+    }
 }
 
 .client-show .grid-logo img {
     width: 100%;
 }
 
-.image {
-    transition: opacity .4s ease-out;
-    display: block;
-    width: 100%;
-}
-
-.image.is-loaded {
-    opacity: 1;
-}
 
 /*------------------footer----------------*/
 
@@ -330,4 +334,10 @@ footer {
     display: flex;
     align-items: flex-end;
     margin-left: 20px;
+}
+
+/*responsive */
+
+@media (min-width: 990px) {
+    
 }
