@@ -142,10 +142,14 @@ section {
 }
 
 .video-layout {
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: right;
+    padding: 0;
+    margin: 0;
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .our-work-sec,
@@ -159,8 +163,9 @@ section {
 
 .our-work-sec .text-box p,
 .video-layout .text-box p {
+    max-width: 800px;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .our-work-sec {
