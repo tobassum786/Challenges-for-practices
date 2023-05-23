@@ -28,3 +28,14 @@ function showSlides(slides, slideIndex, cycle) {
         showSlides(slides, slideIndex, cycle)
     }, cycle);
 };
+
+
+//toggle menu
+
+function toggleMenu() {
+    const menuToggle = document.querySelector('.toggle__menu');
+    const menu = document.querySelector('#menu');
+    
+    menuToggle.classList.toggle('active');
+    menu.classList.toggle('active');
+} 

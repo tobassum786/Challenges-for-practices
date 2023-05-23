@@ -48,17 +48,17 @@ a {
 a:hover::before {
     content: '[';
     opacity: .6;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    padding: 10px;
+    padding: 5px;
 }
 
 a:hover::after {
     content: ']';
     opacity: .6;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    padding: 10px;
+    padding: 5px;
 }
 
 .showcase-card:hover::before {
@@ -122,7 +122,7 @@ section {
     padding: 32px 40px;
     justify-content: space-between;
     align-items: center;
-    line-height: 1.71;
+    line-height: 1.4;
     z-index: 1000;
 }
 
@@ -137,7 +137,8 @@ section {
     position: relative;
     justify-content: center;
     text-align: center;
-    gap: 20px;
+    padding: 0 20px;
+    gap: 30px;
 }
 
 .video-layout {
@@ -175,27 +176,27 @@ video {
 .work-place,
 .about-us {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .what-we-do .img-box,
 .work-place .img-box,
 .about-us .img-box {
-    max-width: 100%;
+    min-width: 45%;
 }
 
 .what-we-do .img-box img,
 .work-place .img-box img,
 .about-us .img-box img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .what-we-do .text-box,
 .work-place .text-box,
 .about-us .text-box {
-    padding: 60px 90px;
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start; 
+    align-items: center;
     line-height: 1.6;
 }
 
@@ -208,19 +209,16 @@ video {
 }
 
 .show-case {
-    margin-top: 100px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
-.show-case .show-case-container {
-    padding: 16px 32px;
-}
 
 .show-case .show-case-container .img-box {
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .show-case .show-case-container .img-box img {
@@ -228,7 +226,6 @@ video {
 }
 
 .show-case .show-case-container .text-box {
-    max-width: 90%;
     padding: 32px 0;
 }
 
@@ -243,6 +240,7 @@ video {
     font-weight: 300;
     line-height: 1.6;
 }
+
 .parent-grid {
     display: grid;
     grid-auto-flow: row;
@@ -274,13 +272,13 @@ video {
         opacity: 1;
         transition: .10s;
     }
-    
+
     50% {
         transform: translateY(-50px);
         opacity: 0;
         transition: .10s;
     }
-    
+
     100% {
         transform: translateY(50px);
         opacity: 0;
@@ -298,7 +296,7 @@ video {
 
 
 footer {
-    padding: 150px 20px 0;
+    padding: 100px 20px 20px;
     width: 100%;
     position: relative;
     display: grid;
@@ -342,6 +340,199 @@ footer {
 
 /*responsive */
 
-@media (min-width: 990px) {
+@media (max-width: 900px) {
+
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    #menu {
+        position: fixed;
+        top: 80px;
+        left: -900px;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        text-align: center;
+        padding: 100px 50px;
+        transition: .5s;
+        z-index: 999;
+        background: #000;
+        gap: 20px;
+    }
+
+    #menu.active {
+        left: 0;
+    }
+
+    .nav-bar #menu li a {
+        color: white;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .nav-bar #menu li:hover::before {
+        content: '[';
+        opacity: .6;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 5px;
+    }
+
+    .nav-bar #menu li:hover::after {
+        content: ']';
+        opacity: .6;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 5px;
+    }
+
+    .toggle__menu {
+        width: 40px;
+        height: 40px;
+        background: url(./assets/images/menu.png)no-repeat center center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    .toggle__menu.active {
+        width: 40px;
+        height: 40px;
+        background: url(./assets/images/close.png) no-repeat center center;
+        background-size: 30px;
+    }
+
+    .video-layout .text-box p {
+        font-size: 32px;
+        font-weight: 600;
+        padding-bottom: 50px;
+    }
+
+    .what-we-do,
+    .about-us {
+        display: block;
+        padding: 20px;
+    }
     
+    .what-we-do .img-box,
+    .about-us .img-box {
+        margin-bottom: 10px;
+    }
+
+    .work-place {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .our-work-sec {
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    .our-work-sec .text-box p {
+        font-size: 32px;
+    }
+
+    .show-case {
+        margin-top: 50px;
+        position: relative;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .show-case .showcase-card {
+        display: flex;
+        height: 550px;
+    }
+
+    .show-case .showcase-card .text-box {
+        font-size: 12px;
+    }
+
+    .clients-showcase {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 414px) {
+
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .video-layout {
+        padding: 10px;
+        margin: 0;
+    }
+
+    video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+
+    .video-layout .text-box p {
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 50px;
+    }
+
+    .what-we-do,
+    .about-us {
+        display: block;
+        padding: 20px;
+    }
+
+    .work-place {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .our-work-sec {
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    .our-work-sec .text-box p {
+        font-size: 24px;
+    }
+
+    .show-case {
+        margin-top: 50px;
+        position: relative;
+        padding: 20px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .show-case .showcase-card {
+        display: flex;
+        height: 550px;
+    }
+
+    .show-case .showcase-card .text-box {
+        font-size: 12px;
+    }
+
+    .clients-showcase {
+        padding: 30px;
+    }
+    
+    footer {
+        display: block;
+    }
 }
