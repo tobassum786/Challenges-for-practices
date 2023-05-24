@@ -37,7 +37,7 @@ a, ul, li {
 }
 
 section {
-    padding: 100px;
+    padding: 50px;
 }
 
 /*Navigation*/
@@ -98,4 +98,35 @@ section {
     padding: var(--padding-md);
     background: var(--bg-color);
     border-radius: 20px;
+}
+
+/*Gallery*/
+
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    gap: 30px;
+    padding: 0 50px;
+}
+
+.gallery .g__image {
+    flex: 1 0 500px;
+    border-radius: 10px;
+}
+
+.gallery .g__image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.gallery .g__video {
+    width: 610px;
+    border-radius: 10px;
+}
+
+.gallery .g__video video  {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
 }
