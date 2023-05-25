@@ -66,13 +66,13 @@ section {
     background-color: var(--bg-color);
     border-radius: 50px;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .nav__bar .nav__bar-items .nav__bar-link {
     margin: var(--margin-sm);
     padding: var(--padding-md) calc(1.6 * var(--padding-md));
     border-radius: 50px;
-    ;
     color: var(--font-color);
     text-align: center;
 }
@@ -131,6 +131,44 @@ section {
     width: 48.50%;
     height: 429px;
     border-radius: 10px;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition: .5s;
+}
+
+
+.g__image .g__image-inner {
+    backface-visibility: hidden;
+}
+
+
+.gallery .g__image .g__image-inner {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    top: 0;
+    height: inherit;
+    transition: .5s;
+    padding: var(--padding-lg);
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.gallery .g__image .g__image-inner p {
+    color: var(--base-color);
+    font-size: calc(1.2 * var(--f-lg));
+}
+
+.gallery .g__image .g__image-inner i {
+    font-size: calc(1.6 * var(--f-lg));
+    color: var(--base-color);
+}
+
+.gallery .g__image:hover .g__image-inner {
+    transition: .5s;
+    transform: rotateY(-180deg);
 }
 
 .gallery .g__image img {
@@ -229,6 +267,7 @@ footer {
     transform: translateY(0);
     transition: all 1s ease-out;
 }
+
 /*responsive*/
 
 @media (max-width: 900px) {
