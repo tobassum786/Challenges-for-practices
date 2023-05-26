@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /*    font color*/
+    --base-color: #d6dae5;
+    --secondary-color: #eafaf1;
+    --font-color: #171716;
+    --header-color: #00ad6a;
+    --heading-color: #1fe374;
+    --h-main-color: #080c16;
+    /*    typography*/
+    --f-sm: 0.8rem;
+    --f-md: 1rem;
+    --f-lg: 1.5rem;
+    /*    padding and margin*/
+    --spacing-unit: 0.625em;
+    --margin: calc(0.2 * var(--spacing-unit));
+    /*2px*/
+    --padding: calc(0.2 * var(--spacing-unit));
+    /*2px*/
+    /*    margin*/
+    --margin-sm: var(--margin);
+    --margin-md: calc(4 * var(--margin));
+    /*8px*/
+    --margin-lg: calc(8 * var(--margin));
+    /*16px*/
+    /*    padding*/
+    --padding-sm: var(--padding);
+    --padding-md: calc(4 * var(--padding));
+    /*8px*/
+    --padding-lg: calc(8 * var(--padding));
+    /*16px*/
+}
+
+/*Resets*/
+a,
+ul,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*navigation*/
+
+.nav-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    width: 100%;
+    background: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.nav-bar .nav__items {
+    display: flex;
+    gap: 35px;
+}
+
+.nav__items .nav__link {
+    color: var(--header-color);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.nav__items .nav__link:hover {
+    color: var(--font-color);
+}
+
+.nav__items .nav__link.active {
+    color: var(--font-color);
+}
+
+.nav__items .nav__btn {
+    width: 80px;
+    height: 30px;
+    border: 2px solid var(--header-color);
+    padding: var(--padding-sm) var(--padding-md);
+    background: var(--secondary-color);
+}
+
+.nav__items .nav__btn:hover {
+    color: var(--header-color);
+    filter: drop-shadow(-5px 5px 0px var(--header-color));
+    transform: translate(-8px, 10px);
+}
