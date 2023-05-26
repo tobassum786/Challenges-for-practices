@@ -132,28 +132,22 @@ section {
     height: 429px;
     border-radius: 10px;
     transform-style: preserve-3d;
-    transform: rotateY(180deg);
     transition: .5s;
 }
-
-
-.g__image .g__image-inner {
-    backface-visibility: hidden;
-}
-
 
 .gallery .g__image .g__image-inner {
     position: absolute;
     background: rgba(255, 255, 255, 0.2);
-    display: flex;
+    display: none;
     width: 100%;
     backdrop-filter: blur(10px);
     top: 0;
     height: inherit;
-    transition: .5s;
     padding: var(--padding-lg);
     justify-content: space-between;
     cursor: pointer;
+    transition: .5s;
+    border-radius: 10px;
 }
 
 .gallery .g__image .g__image-inner p {
@@ -167,8 +161,8 @@ section {
 }
 
 .gallery .g__image:hover .g__image-inner {
+    display: flex;
     transition: .5s;
-    transform: rotateY(-180deg);
 }
 
 .gallery .g__image img {
