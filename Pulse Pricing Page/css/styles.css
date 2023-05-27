@@ -4,10 +4,11 @@
     /*    font color*/
     --base-color: #d6dae5;
     --secondary-color: #eafaf1;
-    --font-color: #171716;
+    --primary-color: #fcfcfc;
     --header-color: #00ad6a;
     --heading-color: #1fe374;
-    --h-main-color: #080c16;
+    --font-color: #080c16;
+    --sub-color: #d6dae5;
     /*    typography*/
     --f-sm: 0.8rem;
     --f-md: 1rem;
@@ -62,13 +63,17 @@ li {
 
 .nav-bar .nav__items {
     display: flex;
+    align-items: center;
     gap: 35px;
+    height: 90px;
 }
 
 .nav__items .nav__link {
     color: var(--header-color);
     text-transform: capitalize;
     font-weight: 600;
+    height: inherit;
+   
 }
 
 .nav__items .nav__link:hover {
@@ -90,5 +95,189 @@ li {
 .nav__items .nav__btn:hover {
     color: var(--header-color);
     filter: drop-shadow(-5px 5px 0px var(--header-color));
-    transform: translate(-8px, 10px);
+}
+
+/*main content*/
+
+.qoutes,
+.main__content {
+    background: var(--secondary-color);
+}
+
+.main__content .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main__content .heading .heading-txt {
+    font-size: calc(2.5* var(--f-lg));
+    font-weight: 600;
+    line-height: 1.2;
+    max-width: 550px;
+    padding-bottom: var(--padding-sm);
+}
+
+.main__content .heading .description {
+    max-width: 600px;
+    line-height: 1.6;
+    font-size: calc(1.2 * var(--f-md));
+}
+
+/*pricing card styling*/
+.pricing__cards {
+    padding: 50px 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing__cards .p__card-body {
+    width: 350px;
+    padding: var(--padding-lg) calc(1.6 * var(--padding-lg));
+}
+
+.pricing__cards .p__card-body .p__card-heading {
+    font-weight: 700;  
+    font-size: calc(0.8 * var(--f-lg));
+    color: var(--header-color);
+    margin-bottom: var(--margin-lg);
+}
+
+.pricing__cards .p__card-body .p__card-list {
+    margin-left: var(--margin-md)
+}
+
+.pricing__cards .p__card-body .p__card-list li {
+    list-style: disc;
+    font-size: calc(0.6 * var(--f-lg));
+}
+
+.pricing__cards .p__card-body .p__card-footer {
+    margin-top: var(--margin-lg);
+    font-size: calc(0.66 * var(--f-lg));
+}
+
+.pricing__cards .p__card-body .p__card-footer a {
+    color: var(--h-main-color);
+    text-decoration: underline;
+}
+
+/*card 02*/
+.r__card {
+    background: var(--primary-color);
+    overflow: hidden;
+    border: 2px solid var(--header-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.r__card::before {
+    content: attr(data-header);
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    display: block;
+    margin-top: -20px;
+    margin-left: -28px;
+    background: var(--header-color);;
+    width: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--f-sm);
+    color: var(--primary-color);
+}
+
+
+.p__card-body .card__text-content {
+    text-align: center;
+}
+
+.p__card-body .card__text-content .p__card-heading {
+    font-size: var(--f-lg);
+    font-weight: 300;
+    color: dimgray;
+    padding-top: var(--padding-md);
+}
+
+.p__card-body .card__text-content .p__card-heading p::before {
+    content: attr(data-heading);
+    font-size: calc(1.8 * var(--f-lg));
+    display: block;
+    line-height: 1;
+    text-transform: capitalize;
+    color: var(--header-color);
+    margin-top: var(--margin-md);
+    font-weight: 700;
+}
+
+.p__card-body .card__text-content .btn {
+    width: 160px;
+    height: 50px;
+    background: var(--heading-color);
+    outline: none;
+    border: none;
+    color: var(--font-color);
+    font-size: calc(1.1 * var(--f-md));
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: var(--margin-lg);
+}
+
+.p__card-body .card__text-content .btn:hover {
+    transform: scale(110%);
+}
+
+.p__card-body .card__text-content .list__heading {
+    font-size: var(--f-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.p__card-list,
+.r__card-list {
+    padding: var(--padding-md);
+}
+
+.p__card .r__card-list .r__card-item,
+.r__card .r__card-list .r__card-item {
+    margin-bottom: var(--margin-lg);
+    list-style-image: url(../images/check.svg);
+}
+
+/*card 03*/
+
+.p__card {
+    border: 1px solid lightgrey;
+}
+
+.p__card .p__card-header {
+    background: lightgray;
+    width: inherit;
+    margin-top: -16px;
+    margin-left: -25px;
+    padding: var(--padding-lg);
+    font-size: var(--f-sm);
+    text-align: center;
+}
+
+.p__card .pr__card-heading p::before {
+    content: attr(data-heading);
+    font-size: calc(1.8 * var(--f-lg));
+    display: block;
+    line-height: 1;
+    text-transform: capitalize;
+    color: var(--header-color);
+    margin-top: var(--margin-md);
+    font-weight: 400;
+}
+
+.p__card .pr__card-heading {
+    font-size: var(--f-lg);
+    font-weight: 300;
+    color: dimgray;
+    padding-top: var(--padding-md);
+    margin-bottom: var(--margin-lg);
 }
