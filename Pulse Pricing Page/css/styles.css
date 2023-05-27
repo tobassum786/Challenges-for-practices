@@ -73,7 +73,7 @@ li {
     text-transform: capitalize;
     font-weight: 600;
     height: inherit;
-   
+
 }
 
 .nav__items .nav__link:hover {
@@ -98,8 +98,7 @@ li {
 }
 
 /*main content*/
-
-.qoutes,
+.qoutes__section,
 .main__content {
     background: var(--secondary-color);
 }
@@ -141,7 +140,7 @@ li {
 }
 
 .pricing__cards .p__card-body .p__card-heading {
-    font-weight: 700;  
+    font-weight: 700;
     font-size: calc(0.8 * var(--f-lg));
     color: var(--header-color);
     margin-bottom: var(--margin-lg);
@@ -180,8 +179,9 @@ li {
     position: absolute;
     display: block;
     margin-top: -20px;
-    margin-left: -28px;
-    background: var(--header-color);;
+    margin-left: -27.5px;
+    background: var(--header-color);
+    ;
     width: inherit;
     text-align: center;
     text-transform: uppercase;
@@ -251,13 +251,14 @@ li {
 
 .p__card {
     border: 1px solid lightgrey;
+    background: var(--primary-color);
 }
 
 .p__card .p__card-header {
     background: lightgray;
     width: inherit;
     margin-top: -16px;
-    margin-left: -25px;
+    margin-left: -26.5px;
     padding: var(--padding-lg);
     font-size: var(--f-sm);
     text-align: center;
@@ -281,3 +282,65 @@ li {
     padding-top: var(--padding-md);
     margin-bottom: var(--margin-lg);
 }
+
+/*Qoutes*/
+
+.qoutes__section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: calc(2.8 * var(--padding-lg));
+}
+
+.qoutes__section .q__main-container .q__image {
+    padding-bottom: var(--padding-lg);
+}
+
+.qoutes__section .q__main-container .qoutes {
+    font-size: var(--f-lg);
+    width: 850px;
+}
+
+.qoutes__section .q__main-container .q__company {
+    font-size: var(--f-sm);
+    margin-top: var(--margin-lg);
+    font-weight: 600;
+    color: var(--header-color);
+}
+
+/*Faq container*/
+
+.faq__container {
+    padding: calc(3.5 * var(--padding-lg));
+}
+
+.faq__container .f__heading {
+    font-size: calc(1.8 * var(--f-lg));
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: var(--padding-lg);
+    margin-left: var(--margin-sm);
+}
+
+.faq__container .f__q-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: calc(3.5 * var(--spacing-unit));
+}
+
+.faq__container .f__q-container .f__q-body {
+    width: 550px;
+}
+
+.faq__container .f__q-container .f__q-body .f__q-heading {
+    font-size: calc(1.2 * var(--f-md));
+    padding-bottom: var(--padding-sm);
+    font-weight: 600;
+}
+
+.faq__container .f__q-container .f__q-body .f__q-answer p {
+    padding-bottom: var(--padding-lg);
+}
+
+/*footer*/
