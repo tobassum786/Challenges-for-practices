@@ -15,12 +15,15 @@
         <div class="logo">
             <img src="./images/pulse-logo.svg" alt="logo">
         </div>
-        <ul class="nav__items">
+        <div class="toogle__menu" onclick="toogleMenu();"></div>
+        <ul class="nav__items" id="nav__menu">
             <li><a href="#" class="nav__link">features</a></li>
             <li><a href="#" class="nav__link">customer stories</a></li>
             <li><a href="#" class="nav__link  active">pricing</a></li>
             <li><a href="#" class="nav__link">blog</a></li>
-            <li><a href="#" class="nav__link nav__btn">sign up</a></li>
+            <div class="nav__btn">
+                <button>Sign In</button>
+            </div>
         </ul>
     </nav>
     <!--    main content of page-->
@@ -269,5 +272,5 @@
         </div>
     </footer>
 </body>
-
+<script src="js/main.js"></script>
 </html>

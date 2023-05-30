@@ -63,8 +63,10 @@ li {
 .nav-bar .nav__items {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 35px;
     height: 90px;
+    width: 600px;
 }
 
 .nav__items .nav__link {
@@ -84,16 +86,25 @@ li {
 }
 
 .nav__items .nav__btn {
-    width: 80px;
-    height: 30px;
-    border: 2px solid var(--header-color);
-    padding: var(--padding-sm) var(--padding-md);
-    background: var(--secondary-color);
+    width: 90px;
+    height: 40px;
+    background: var(--header-color);
 }
 
-.nav__items .nav__btn:hover {
+.nav__items .nav__btn button {
+    width: inherit;
+    height: inherit;
+    outline: none;
+    border: 2px solid var(--header-color);
+    font-weight: 700;
     color: var(--header-color);
-    filter: drop-shadow(-5px 5px 0px var(--header-color));
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+.nav__items .nav__btn button:hover {
+    margin-top: -8px;
+    margin-left: 8px;
 }
 
 /*main content*/
@@ -111,7 +122,7 @@ li {
 }
 
 .main__content .heading .heading-txt {
-    font-size: calc(2.5* var(--f-lg));
+    font-size: calc(2.5 * var(--f-lg));
     font-weight: 600;
     line-height: 1.2;
     max-width: 550px;
@@ -175,12 +186,10 @@ li {
 .r__card::before {
     content: attr(data-header);
     border-radius: 10px 10px 0 0;
-    position: absolute;
     display: block;
     margin-top: -20px;
     margin-left: -27.5px;
     background: var(--header-color);
-    ;
     width: inherit;
     text-align: center;
     text-transform: uppercase;
@@ -297,7 +306,7 @@ li {
 
 .qoutes__section .q__main-container .qoutes {
     font-size: var(--f-lg);
-    width: 850px;
+    max-width: 850px;
 }
 
 .qoutes__section .q__main-container .q__company {
@@ -353,6 +362,7 @@ footer {
 footer .ft__main-row {
     display: flex;
     justify-content: space-around;
+    flex-flow: row wrap;
 }
 
 footer .ft__main-row .ft__items {
@@ -360,11 +370,11 @@ footer .ft__main-row .ft__items {
 }
 
 footer .ft__main-row .ft__items .ft__btn {
-    width: 350px;
+    width: 300px;
     height: 60px;
     background: gray;
     margin-top: calc(3.5 * var(--margin-lg));
-    
+
 }
 
 footer .ft__main-row .ft__items .ft__btn button {
@@ -372,7 +382,6 @@ footer .ft__main-row .ft__items .ft__btn button {
     height: inherit;
     font-size: var(--f-md);
     font-weight: 700;
-    letter-spacing: 1.2px;
     color: var(--font-color);
     background: linear-gradient(to right, #00ad6a 40%, #1fe374);
     outline: none;
@@ -411,7 +420,7 @@ footer .ft__main-row .ft__items .ft__nav-items .ft__nav-link:hover {
 }
 
 footer .ft__cta {
-    width: 700px;
+    max-width: 700px;
     padding: 0 calc(4.4 * var(--margin-lg));
     margin-top: calc(3.5 * var(--margin-lg));
 }
@@ -425,3 +434,145 @@ footer .ft__cta p a {
     color: gray;
     text-decoration: underline;
 }
+
+/*Responsive for Ipad devics*/
+
+@media (max-width: 900px) {
+
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .nav-bar {
+        padding: 30px 50px;
+    }
+    
+    section {
+        padding: var(--padding-lg);
+    }
+
+    #nav__menu {
+        position: fixed;
+        top: 90px;
+        left: -900px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--font-color);
+        z-index: 1000;
+        text-align: center;
+        transition: .5s;
+    }
+
+    #nav__menu.active {
+        left: 0;
+    }
+
+    #nav__menu .nav__items .nav__link {
+        padding-bottom: var(--margin-md);
+    }
+
+    #nav__menu .nav__link.active {
+        color: var(--base-color);
+    }
+
+    #nav__menu .nav__link.active:hover {
+        color: var(--header-color);
+    }
+
+    #nav__menu .nav__link:hover {
+        color: var(--base-color);
+    }
+
+    .toogle__menu {
+        width: 40px;
+        height: 40px;
+        background: url(../images/menu.png) no-repeat center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    .toogle__menu.active {
+        width: 40px;
+        height: 40px;
+        background: url(../images/close.png) no-repeat center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+
+    /*    Price boxes*/
+    .pricing__cards {
+        padding: 30px 100px;
+    }
+
+    .pricing__cards .p__card-body {
+        width: 100%;
+        margin-bottom: var(--margin-lg);
+    }
+
+    .pricing__cards .r__card::before {
+        content: attr(data-header);
+        width: 120%;
+        text-align: center;
+    }
+
+    .p__card .p__card-header {
+        background: lightgray;
+        width: 108.5%;
+        margin-top: -16px;
+        margin-left: -26.5px;
+        padding: var(--padding-lg);
+        font-size: var(--f-sm);
+        text-align: center;
+    }
+    
+    footer .ft__main-row {
+        flex-direction: column;
+    }
+    
+    footer .ft__main-row .ft__items .ft__btn {
+        margin-bottom: var(--margin-lg);
+    }
+    
+    
+    footer .ft__cta {
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        margin-top: var(--margin-lg);
+    }
+
+}
+
+@media (max-width: 414px) {
+    
+    .main__content .heading .heading-txt {
+        font-size: calc(1.5 * var(--f-lg));
+        padding-bottom: var(--padding-lg);
+    }
+    
+    .pricing__cards {
+        padding: 30px 0;
+    } 
+    
+    .main__content .pricing__cards .p__card-body {
+        width: 100%;
+    }
+    
+    .p__card .p__card-header {
+        background: lightgray;
+        width: 115.5%;
+        margin-top: -16px;
+        margin-left: -26.5px;
+        padding: var(--padding-lg);
+        font-size: var(--f-sm);
+        text-align: center;
+    }
+} 
