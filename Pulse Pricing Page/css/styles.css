@@ -8,7 +8,6 @@
     --header-color: #00ad6a;
     --heading-color: #1fe374;
     --font-color: #080c16;
-    --sub-color: #d6dae5;
     /*    typography*/
     --f-sm: 0.8rem;
     --f-md: 1rem;
@@ -344,3 +343,85 @@ li {
 }
 
 /*footer*/
+
+footer {
+    position: relative;
+    padding: calc(4.5 * var(--padding-lg));
+    background-color: var(--font-color);
+}
+
+footer .ft__main-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .ft__main-row .ft__items {
+    line-height: 2.7
+}
+
+footer .ft__main-row .ft__items .ft__btn {
+    width: 350px;
+    height: 60px;
+    background: gray;
+    margin-top: calc(3.5 * var(--margin-lg));
+    
+}
+
+footer .ft__main-row .ft__items .ft__btn button {
+    width: inherit;
+    height: inherit;
+    font-size: var(--f-md);
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--font-color);
+    background: linear-gradient(to right, #00ad6a 40%, #1fe374);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+footer .ft__main-row .ft__items .ft__btn button:hover {
+    margin-top: -20px;
+    margin-left: var(--margin-md);
+}
+
+.ft__heading {
+    color: var(--base-color);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+footer .ft__main-row .ft__items .ft__logo {
+    width: 230px;
+    height: 100px;
+}
+
+footer .ft__main-row .ft__items .ft__logo img {
+    width: inherit
+}
+
+footer .ft__main-row .ft__items .ft__nav-items .ft__nav-link {
+    color: var(--header-color);
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+footer .ft__main-row .ft__items .ft__nav-items .ft__nav-link:hover {
+    color: var(--base-color);
+}
+
+footer .ft__cta {
+    width: 700px;
+    padding: 0 calc(4.4 * var(--margin-lg));
+    margin-top: calc(3.5 * var(--margin-lg));
+}
+
+footer .ft__cta p {
+    font-size: var(--f-sm);
+    color: gray;
+}
+
+footer .ft__cta p a {
+    color: gray;
+    text-decoration: underline;
+}
